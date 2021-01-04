@@ -8,16 +8,16 @@
     <script>
         $(document).ready(function(){
             //Get
-            $('#set-text-btn').click(function(){
+            $('#get-text-btn').click(function(){
                 alert($('#test-line').text("")) 
             })
-            $('#set-html-btn').click(function(){
+            $('#get-html-btn').click(function(){
                 alert($('#test-line').html("")) 
             })  
-            $('#set-value-btn').click(function(){
+            $('#get-value-btn').click(function(){
                 alert($('#username-input').val("")) 
             }) 
-            $('#set-attr-btn').click(function(){
+            $('#get-attr-btn').click(function(){
                 alert($('#test-line').attr("style")) 
             }) 
         })
@@ -27,10 +27,10 @@
     <p id="test-line" style="background-color: antiquewhite;color: burlywood; padding: 8px;">This is <b>Test</b> line</p>
     <label for="username">Username:</label>
     <input id="username-input" name="username" value="Quang kute hot me" type="text">
-    <h4>Set</h4>
-    <button id="set-text-btn">Set Test</button>
-    <button id="set-html-btn">Set HTML</button>
-    <button id="set-value-btn">Set Value</button>
-    <button id="set-attr-btn">Set Attr</button>
+    <h4>Get</h4>
+    <button id="get-text-btn">Get Test</button>
+    <button id="get-html-btn">Get HTML</button>
+    <button id="get-value-btn">Get Value</button>
+    <button id="get-attr-btn">Get Attr</button>
 </body>
 </html>
