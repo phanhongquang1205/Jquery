@@ -1,6 +1,7 @@
 // ESS 5 REQUIRE EXPRESSJS === ESS 6 IMPORT
 const express = require('express')
 
+
 const usersRoute = require('./route/users.route')
 const loginRoute = require("./route/login.route")
 const postsRoute = require('./route/posts.route')
@@ -27,7 +28,6 @@ app.use(express.urlencoded({
 app.use('/users', usersRoute)
 app.use('/login', loginRoute)
 app.use('/posts', postsRoute)
-
 
 
 app.get('*', (req, res) => {
