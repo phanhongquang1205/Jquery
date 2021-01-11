@@ -14,7 +14,7 @@
         width: 100vw;
         height: 100vh;
         overflow: hidden;
-        background-image: url('/img/leaves-background-color-year_23-2148380575.jpg');
+        background-image: url('https://image.freepik.com/free-vector/leaves-background-color-year_23-2148380575.jpg');
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -69,11 +69,11 @@
 </style>
 <body>
     <h1>Form</h1>
-    <form action="/client/jquery-post.html" method="post"> 
+    <form action="" method="POST"> 
         <label for="title">Title: </label>
-        <input type="text" name="title">
+        <input type="text" name="title" id="title">
         <label for="content">Content: </label>
-        <textarea name="content" id="" width='50vw' rows="3"></textarea>
+        <textarea name="content" id="content" width='50vw' rows="3"></textarea>
         <label for="author">Author: </label>
         <select name="author" id="author" >
             <option value="admin">admin</option>
@@ -83,5 +83,16 @@
     </form>
 </body>
 <script>
-</script>
+    document.getElementById("sub").addEventListener("click", () =>{
+        let title = document.getElementById("title").value
+        let content = document.getElementById("content").value
+        let author = document.getElementById("author").value
+        localStorage.setItem('title', title)
+        localStorage.setItem('content', content)
+        localStorage.setItem('author', author)
+        console.log(title,content,author)
+        alert('Post send successful')
+        return 
+    })
+    </script>
 </html>

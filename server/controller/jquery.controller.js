@@ -9,17 +9,16 @@
 // 8. Thực hiện khai báo y tế trực tuyến tại <span style="color: rgb(17, 131, 228);">https://tokhaiyte.vn</span> hoặc tải ứng dụng NCOVI từ địa chỉ <span style="color: rgb(17, 131, 228);">https://ncovi.vn</span> và thường xuyên cập nhật tình trạng sức khoẻ của bản thân.<br>
 // 9. Cài đặt ứng dụng Bluezone để được cảnh báo nguy cơ lây nhiễm COVID-19, giúp bảo vệ bản thân và gia đình: <span style="color: rgb(17, 131, 228);">https://www.bluezone.gov.vn/.</span>`
 
-
-
 module.exports.readFile = (req, res) =>{
         const fs = require('fs');
       
-        fs.readFile("../client/jquery-post.html", (err, data) => {
+        fs.readFile("/client/jquery-post.html", (err, data) => {
           if (err) throw err;
-          
           res.writeHead(200, {"Content-type": "text/html"})
           res.write(data)
           res.end()
         });
       }
-
+// module.exports.postPost = (req, res) => {
+//         const title = req.body.title
+// }
