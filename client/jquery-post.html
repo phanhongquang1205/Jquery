@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery post</title>
+</head>
+<style>
+    *{
+        padding: 10px 0;
+        margin: 0;
+    }
+    body {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        background-image: url('/img/leaves-background-color-year_23-2148380575.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    form{
+        padding-left: 30%;
+        padding-top: 20%;
+        width: 50%;
+        height: 50%;
+        display: flex;
+        flex-direction:column;
+        color: #39d2e6;
+    }
+    select,input,textarea{
+        color: whitesmoke;
+        border: 1px solid;
+        border-color: black;
+        box-shadow: 2px 2px 8px 1px rgba(163, 154, 154, 0.863);
+        cursor: pointer;
+    }
+    label{
+        font-size: 20px;
+        font-weight:bold;
+    }
+    select{
+        width:8%;
+        background-color:#004b84;
+        font-size: 16px;
+    }
+    input{
+        margin-right: auto;
+        width: 40%;
+        background-color:#004b84;
+        font-size: 16px;
+    }
+    textarea{
+        background-color: #004b84;
+        font-size: 16px;
+    }
+    #sub{
+        width:12%;
+        position: relative;
+        top: 10%;
+        cursor: pointer;
+    }
+    h1{
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        font-size: 100px;
+        transform: translate(-50%,-50%);
+    }
+</style>
+<body>
+    <h1>Form</h1>
+    <form action="/client/jquery-post.html" method="post"> 
+        <label for="title">Title: </label>
+        <input type="text" name="title">
+        <label for="content">Content: </label>
+        <textarea name="content" id="" width='50vw' rows="3"></textarea>
+        <label for="author">Author: </label>
+        <select name="author" id="author" >
+            <option value="admin">admin</option>
+            <option value="user">user</option>
+        </select>
+        <input type="submit" id="sub">
+    </form>
+</body>
+<script>
+</script>
+</html>
