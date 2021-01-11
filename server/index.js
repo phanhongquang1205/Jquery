@@ -4,6 +4,7 @@ const express = require('express')
 const usersRoute = require('./route/users.route')
 const loginRoute = require("./route/login.route")
 const postsRoute = require('./route/posts.route')
+const jqueryRoute = require('./route/jquery.route')
 // ASSIGN APP VARIABLE AND CREATE SERVER
 const app = express()
 const port = 3000
@@ -27,6 +28,8 @@ app.use(express.urlencoded({
 app.use('/users', usersRoute)
 app.use('/login', loginRoute)
 app.use('/posts', postsRoute)
+app.use('/jquery', jqueryRoute)
+
 
 
 
