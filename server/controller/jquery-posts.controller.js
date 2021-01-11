@@ -14,7 +14,7 @@
 module.exports.readFile = (req, res) =>{
         const fs = require('fs');
       
-        fs.readFile('C:\Users\Admin\Desktop\FullStark\Jquery\client\jquery-post.html', (err, data) => {
+        fs.readFile('./client/jquery-post.html', (err, data) => {
           if (err) throw err;
           
           res.writeHead(200, {"Content-type": "text/html"})
