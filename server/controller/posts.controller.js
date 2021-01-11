@@ -1,10 +1,9 @@
-const posts = [
-    {post: 'Post one information'},
-    {post: 'Post two information'},
-    {post: 'Post three information'},
-    {post: 'Post four information'},
-    {post: 'Post five information'}
-]
+const posts =[]
+
+
+module.exports.viewPost = (req, res) => {
+    res.render('jquery', {posts})
+}
 
 module.exports.getPosts = (req, res) => {
     res.render('post', {posts})
@@ -33,3 +32,5 @@ module.exports.deletePost = (req,res) =>{
     posts[id-1].post = "Deleted"
     res.send(`${posts[id-1].post}`)
 }
+
+
