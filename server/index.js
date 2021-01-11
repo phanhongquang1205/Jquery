@@ -28,6 +28,17 @@ app.use(express.urlencoded({
 app.use('/users', usersRoute)
 app.use('/login', loginRoute)
 app.use('/posts', postsRoute)
+app.use('/read-file', (req,res)=>{
+  const fs = require('fs');
+
+  fs.readFile('./file.html', (err, data) => {
+    if (err) throw err;
+    
+    res.writeHead(200, {"Content-type": "text/html"})
+    res.write(data)
+    res.end()
+  });
+})
 
 
 app.get('*', (req, res) => {
