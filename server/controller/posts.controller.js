@@ -1,9 +1,7 @@
 const posts =[]
 
 
-module.exports.viewPost = (req, res) => {
-    res.render('jquery', {posts})
-}
+
 
 module.exports.getPosts = (req, res) => {
     res.render('post', {posts})
