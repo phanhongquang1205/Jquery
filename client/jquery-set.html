@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){ 
+            //Set
+            $('#set-text-btn').click(function(){
+                $('#test-line').text("Set test")
+            })
+            $('#set-html-btn').click(function(){
+            $('#test-line').html("Set <h1>html</h1>")
+            })  
+            $('#set-value-btn').click(function(){
+                $('#username-input').val("Set value")
+            }) 
+            $('#set-attr-btn').click(function(){
+                $('#test-line').attr("style","color:red; background-color blue")
+            }) 
+        })
+    </script>
+</head>
+<body>
+    <p id="test-line" style="background-color: antiquewhite;color: burlywood; padding: 8px;">This is <b>Test</b> line</p>
+    <label for="username">Username:</label>
+    <input id="username-input" name="username" value="Quang kute hot me" type="text">
+    <h4>SET</h4>
+    <button id="set-text-btn">Set Test</button>
+    <button id="set-html-btn">Set HTML</button>
+    <button id="set-value-btn">Set Value</button>
+    <button id="set-attr-btn">Set Attr</button>
+</body>
+</html>
