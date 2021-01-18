@@ -5,23 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jquery</title>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            //Get
-            $('#get-text-btn').click(function(){
-                alert($('#test-line').text()) 
-            })
-            $('#get-html-btn').click(function(){
-                alert($('#test-line').html()) 
-            })  
-            $('#get-value-btn').click(function(){
-                alert($('#username-input').val()) 
-            }) 
-            $('#get-attr-btn').click(function(){
-                alert($('#test-line').attr("")) 
-            }) 
-        })
-    </script>
+
 </head>
 <body>
     <p id="test-line" style="background-color: antiquewhite;color: burlywood; padding: 8px;">This is <b>Test</b> line</p>
@@ -33,4 +17,21 @@
     <button id="get-value-btn">Get Value</button>
     <button id="get-attr-btn">Get Attr</button>
 </body>
+<script>
+    $(document).ready(function(){
+        //Get
+        $('#get-text-btn').click(function(){
+            alert($('#test-line').text()) 
+        })
+        $('#get-html-btn').click(function(){
+            alert($('#test-line').html()) 
+        })  
+        $('#get-value-btn').click(function(){
+            alert($('#username-input').val()) 
+        }) 
+        $('#get-attr-btn').click(function(){
+            alert($('#test-line').attr('style')) 
+        }) 
+    })
+</script>
 </html>
